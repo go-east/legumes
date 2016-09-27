@@ -1,6 +1,13 @@
-
-<h1> Voici les aliments </h1>
-
-<% @nourritures.each do |nourriture| %>
-<%= nourriture.name %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1> Voici les fruits de saison ! </h1>
+      <% @nourritures.each do |nourriture| %>
+        <hr>
+        <p> <%= nourriture.vegetable %> </p>
+        <p> <%= nourriture.variety %> </p>
+        <p> <%= nourriture.name %> </p>
+      <% end %>
+    </div>
+  </div>
+</div>
