@@ -1,17 +1,6 @@
 Rails.application.routes.draw do
-  get 'nourritures/index'
 
-  get 'nourritures/show'
-
-  get 'nourritures/new'
-
-  get 'nourritures/create'
-
-  get 'nourritures/edit'
-
-  get 'nourritures/update'
-
-  get 'nourritures/destroy'
+  resources :nourritures
 
   devise_for :users
   root to: 'pages#home'
