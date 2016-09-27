@@ -3,11 +3,17 @@
     <div class="col-xs-12">
       <h1> Voici les fruits de saison ! </h1>
       <% @nourritures.each do |nourriture| %>
-        <hr>
-        <p> <%= nourriture.vegetable %> </p>
-        <p> <%= nourriture.variety %> </p>
-        <p> <%= nourriture.name %> </p>
+      <% if Date.today.between?(nourriture.start_at, nourriture.end_at) %>
+          <hr>
+          <p> <%= nourriture.variety %> </p>
+          <p> <%= nourriture.name %> </p>
+          <p> <%= nourriture.start_at %> </p>
+          <p> <%= nourriture.end_at %> </p>
+
+        <% end %>
       <% end %>
     </div>
   </div>
 </div>
+
+

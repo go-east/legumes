@@ -10,14 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160927132520) do
+ActiveRecord::Schema.define(version: 20160927155401) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "nourritures", force: :cascade do |t|
-    t.date     "start_at"
-    t.date     "end_at"
     t.integer  "kilojoules"
     t.integer  "calories"
     t.integer  "proteines"
@@ -28,6 +26,8 @@ ActiveRecord::Schema.define(version: 20160927132520) do
     t.string   "name"
     t.string   "variety"
     t.string   "vegetable"
+    t.date     "start_at"
+    t.date     "end_at"
   end
 
   create_table "users", force: :cascade do |t|
